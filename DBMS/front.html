@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Event Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Black background */
+            color: #ffffff; /* White text color */
+        }
+
+        .header {
+            background-color: #000000;
+            background-repeat: no-repeat;
+            height: 150px;
+            background-position: right;
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .scrolling-text {
+            white-space: nowrap; /* Prevent text from wrapping */
+            animation: scrollText 15s linear infinite; /* Animation */
+        }
+
+        /* Keyframes animation for scrolling text */
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%); /* Start from the right */
+            }
+            100% {
+                transform: translateX(-100%); /* Scroll to the left */
+            }
+        }
+
+        .event-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .event-buttons a {
+            text-decoration: none;
+        }
+        
+        /* Style the buttons */
+        .event-buttons button {
+            border: none;
+            background-color: #d4d4d4;/* Green button color */
+            color: #fff; /* White text color */
+            text-transform: uppercase; /* Uppercase text */
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Add a hover effect to the buttons */
+        .event-buttons button:hover {
+            background-color: #d4d4d4;/* Darker green on hover */
+            transform: scale(1.05); /* Scale up on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .event-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #000000; /* Black background for event sections */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px #292929;
+            margin-top: 40px;
+        }
+
+        .event-logo {
+            width: 500px; /* Adjust the width as needed */
+            height: auto;
+        }
+
+        .graphic {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .event-button {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .event-button button {
+            width: 100px; /* Adjust width as needed */
+            height: 35px; /* Adjust height as needed */
+            background-color: #d4d4f4;
+            border-radius: 8px;
+            color: #000000;
+            cursor: pointer;
+            border: none;
+        }
+        
+        
+        .description {
+            padding: 20px;
+            background-color: black; /* Black background for event description */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .event {
+            background-color: black; /* Black background for event content */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 3px 6px #292929;
+        }
+
+        .event:hover {
+            box-shadow: 0 4px 8px #575857; /* Add a box shadow on hover for depth */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        .event-buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #000000; /* White text color */
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+
+        .event-button a {
+            text-decoration: none;  
+        }
+
+        .event-buttons button {
+            border: none;
+            background-color: #d4d4f4;
+            color: #000000; /* White text color */
+            text-transform: uppercase; /* Uppercase text */
+            font-weight: bold;
+            padding: 15px 30px; /* Adjust padding for larger buttons */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 16px; /* Adjust font size for larger buttons */
+        }
+        .event-buttons button:hover{
+            background-color: #cbcbcb;
+        }
+
+        /* Add a hover effect to the "Click Here for Details" button */
+        .event-button button:hover {
+             /* Darker green on hover */
+            transform: scale(1.05); /* Scale up on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+            
+
+       .header h2, .header h1, .header h3 {
+            color: #ffffff; /* White text color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0.7;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 30px; /* Increase font size for the title */
+            text-transform: uppercase; /* Uppercase the title text */
+            letter-spacing: 5px; /* Add letter spacing */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a text shadow */
+            animation: blink 1s infinite alternate; /* Add blinking animation */
+        }
+
+        .header h1 {
+            font-size: 45px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: blink 1s infinite alternate;
+        }
+
+        .header h3 {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: blink 1.5s infinite alternate;
+            
+        }
+        .event h3{
+            text-align: center;
+        }
+        @keyframes blink {
+            0% {
+                opacity: 0.7;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .event-section:hover {
+            transform: scale(1.05); /* Scale up the section slightly on hover */
+            box-shadow: 0 4px 8px #d4d4d4;/* Add a box shadow on hover for depth */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        }
+        .scrolling-text {
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: hidden;
+            animation: scrollText 15s linear infinite 0s;
+            
+        }
+        /* Keyframes animation for scrolling text */
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%); /* Start from the right */
+            }
+            100% {
+                transform: translateX(-100%); /* Scroll to the left */
+            }
+        }
+        .container {
+            margin: 0 100px; /* Add margin to both left and right sides */
+        }
+         
+
+
+
+        .displayed-table {
+            width: 200%;
+            border-collapse: collapse;
+            margin-top: 100px; /* Add some spacing above the table */
+        }
+    
+        .displayed-table, .displayed-table th, .displayed-table td {
+            border: 2px solid #ddd;
+        }
+    
+        .displayed-table th, .displayed-table td {
+            padding: 15px; /* Increase padding for better readability */
+            text-align: center; /* Center-align table content */
+        }
+    
+        .displayed-table th {
+            background-color: #d4d4f4;
+            color: #040404; /* White text color */
+            font-weight: bold;
+        }
+    
+        .displayed-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    
+        .displayed-table tr:hover {
+            background-color: #ddd;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 style="font-size: 32px" class="main-heading">ST JOSEPH ENGINEERING COLLEGE</h1>
+        <h3 style="font-size: 17px">Vamanjoor, Mangaluru</h3>
+        <h3 style="font-size: 17px">An Autonomous Institution</h3>
+    </div>
+    <br> <br>
+    <div class="scrolling-text">
+        <h2 style="font-size: 33px" class="sub-heading">ONLINE EVENT MANAGEMENT SYSTEM</h2>
+    </div>
+    <div class="event-buttons">
+        <a href="milan1.html"><button>Milan</button></a>
+        <a href="tiara1.html"><button>Tiara</button></a>
+        <a href="GoforGold1.html"><button>Go for Gold</button></a>
+        <a href="about.html"><button>About Us</button></a>
+        <a href="contact.html"><button>Contact</button></a>
+    </div>
+    <div class="container">
+    <div class="event-section">
+        <div class="event-logo">
+            <img src="./tiara.png" alt="Tech Event Logo" class="event-logo">
+        </div>
+        <div class="description">
+            <div class="event">
+                <h3>TECHNICAL EVENT : TIARA</h3>
+                <p>
+                    Experience innovation and technology at its finest in our technical event, TIARA. Join us for workshops, tech talks, and hands-on sessions to explore the latest advancements in various technical fields. This event is a platform for learning, networking, and showcasing your technical skills. Don't miss the opportunity to engage with experts and enthusiasts from the tech industry.
+                </p>
+                <div class="event-button">
+                    <a href="tiara.html" style="text-decoration: none;"><button>Click Here</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="event-section">
+        <div class="event-logo">
+            <img src="./milan.png" alt="Cultural Event Logo" class="event-logo">
+        </div>
+        <div class="description">
+            <div class="event">
+                <h3>CULTURAL EVENT : MILAN</h3>
+                <p>
+                    MILAN is our celebration of culture, diversity, and creativity. Immerse yourself in captivating performances, art exhibitions, and cultural showcases from around the world. This event brings together the joy of music, dance, fashion, and artistic expression. Join us to witness the richness of cultures and connect with fellow enthusiasts.
+                </p>
+                <div class="event-button">
+                    <a href="milan.html" style="text-decoration: none;"><button>Click Here</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="event-section">
+        <div class="event-logo">
+            <img src="./sports.png" alt="Sports Event Logo" class="event-logo">
+        </div>
+        <div class="description">
+            <div class="event">
+                <h3>GO FOR GOLD : SPORTS DAY</h3>
+                <p>
+                    Gear up for a day filled with excitement, energy, and sportsmanship in our sports event, GO FOR GOLD. Compete in a variety of sports and games, showcase your athletic abilities, and enjoy a day of friendly competition and camaraderie. Whether you're a seasoned athlete or just looking to have fun, this event has something for everyone.
+                </p>
+                <div class="event-button">
+                    <a href="GoforGold.html" style="text-decoration: none;"><button>Click Here</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="event-buttons">
+        <form method="POST" action="manipulate_data.php">
+       <button type="submit" name="displayButton">Display Registrations</button>
+   </form><br><br><br>
+   </div>
+
+
+    </div>
+</body>
+</html>

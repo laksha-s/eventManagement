@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MILAN</title>
+<style>
+
+  header{
+    background-color: #000000;            
+    background-repeat: no-repeat;
+    height: 120px;
+    background-position: right ;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+  }       
+
+  .hero-image {    
+    background-color: #000000;
+    height: 3200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+  }
+
+  .hero {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+  }
+
+  .text {
+    text-align: left;
+    position: relative;
+    top: 20%;
+    left: 2.0%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+  }
+        
+  .sentence-with-button {
+    display: flex;
+    align-items: center;
+  }
+
+  .sentence {
+    flex: 1;
+    margin-right: 10px; /* Adjust spacing between sentence and button */
+  }
+
+  a:link, a:visited {
+    background-color: #d4d4f4;
+    color: black;
+    border-radius: 5px;
+    padding: 8.0px 8.0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a:hover, a:active {
+    background-color: #c7c7c7;
+    border: none;
+    color: rgb(0, 0, 0);   
+  }
+  
+  body.box {
+    display: flex;      
+    justify-content: center;
+    align-items: center;
+    height: 100vh;      
+    background-color: #f4f2f2;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+
+  @keyframes pop {
+    0%, 10% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;   
+   }
+  }
+
+  .header h1 {
+    margin: 0;
+    color: #ffffff;
+    cursor: url(path-to-your-cursor-image.png), pointer;
+    padding: 1px;
+    font-size: 50px; /* Increase font size for the title */
+    text-transform: uppercase; /* Uppercase the title text */
+    letter-spacing: 5px; /* Add letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a text shadow */
+    animation: blink 1s infinite alternate; /* Add blinking animation */
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+   }
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+  .header h5 {
+    margin: 0;
+    color: #ffffff;
+    cursor: url(path-to-your-cursor-image.png), pointer;    
+    padding: 1px;
+    font-size: 15px; /* Increase font size for the title */
+    text-transform:capitalize; /* Uppercase the title text */
+    letter-spacing: 3px; /* Add letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a text shadow */
+    animation: blink 2s infinite alternate; /* Add blinking animation */
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+  .highlight-pop:hover {
+    background-color: #000000;
+    color: #e0e0e0;
+  }
+
+  .green-box {
+    background-color: #d4d4f4;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 9px; /* Rounded corners */   
+    width: 60%;
+    cursor:  pointer;
+  }
+
+  .green-box h1 {
+    margin: 0;
+    color: #000000;
+    font-size: 48px; /* Increase font size for the title */
+    text-transform: uppercase; /* Uppercase the title text */
+    letter-spacing: 5px; /* Add letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0); /* Add a text shadow */
+    animation: blink 1s infinite alternate; /* Add blinking animation */
+  }
+
+  .green-box h5 {
+    margin: 0;
+    color: #000000;
+    font-size: 12px; /* Increase font size for the title */
+    text-transform: capitalize; /* Uppercase the title text */
+    letter-spacing: 2px; /* Add letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0); /* Add a text shadow */
+    animation: blink 1.7s infinite alternate; /* Add blinking animation */
+  }
+
+  .container {
+    margin: 0 20px;
+  }
+  
+</style>
+</head>
+
+<body>
+    <header>    
+      <h1 style="font-size:30px">ST JOSEPH ENGINEERING COLLEGE</h1>
+      <p style="font-size:18px">Vamanjoor, Mangaluru</p>
+      <p style="font-size:18px">An Autonomous Institution</p>    
+    </header>
+    <div class="hero-image">
+      <div class="hero-text">
+        <div class="header" id="milan"><br><br>
+          <div class="green-box">
+            <h1 style="font-size:32px">Milan</h1><br>
+            <h5 style="font-size:17px">Celebration of culture, diversity, creativity!</h5><br>
+          </div>
+        </div>
+        <br>
+        <div class="hero">
+          <br><br><p style="font-size:17px">Immerse yourself in captivating performances, art exhibitions, and cultural showcases from around the world!!</p>
+        </div>    <br/><br/> 
+        
+        <div class="container">
+          <div class ="text">
+            <br/><br><br>       
+            <h2 style="font-size:30px">Cultural events</h2>
+            <hr>
+            <h4>CompID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; CompName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Date</h4><hr><br>       
+          </div>
+
+          <div class ="text">  
+            <div class="sentence-with-button"><hr>
+              <h3 class="sentence">201  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Rangoli Rendezvous&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 15-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>
+            <div class="sentence-with-button">
+              <h3 class="sentence">202 &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Talent Hunt &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 15-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>
+            <div class="sentence-with-button">
+              <h3 class="sentence">203&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Eastern Singing&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;15-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr/>
+            <div class="sentence-with-button">
+              <h3 class="sentence">204&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;Art and Craft &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  15-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div><hr>     
+          </div>
+      
+          <div class ="text">      
+            <div class="sentence-with-button">
+              <h3 class="sentence">205 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  Western Singing  &nbsp;&nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; 16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>
+            <div class="sentence-with-button">
+              <h3 class="sentence">206 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  Dad Jokes &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; 16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>
+            <div class="sentence-with-button">
+              <h3 class="sentence">207&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; Expressive Elegance&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr/>
+            <div class="sentence-with-button">
+              <h3 class="sentence">208 &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Ethnic wear  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>     
+          </div>
+          
+          <div class ="text">   
+            <div class="sentence-with-button">
+              <h3 class="sentence">209 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  Dance Clash  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>
+            <div class="sentence-with-button">
+              <h3 class="sentence">210 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  Drama Delight &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>
+            <div class="sentence-with-button">
+              <h3 class="sentence">211&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; Brush and Palette Clash&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr/>
+            <div class="sentence-with-button">
+              <h3 class="sentence">212 &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Folk Fusion Fiesta &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; 16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>       
+          </div>
+          
+          <div class ="text">     
+            <div class="sentence-with-button">
+              <h3 class="sentence">213 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  Lingo Fest  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;16-05-2024</h3> 
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>
+            <div class="sentence-with-button">
+              <h3 class="sentence">214 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  Creative Carnical &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>
+            <div class="sentence-with-button">
+              <h3 class="sentence">215&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; Flavor Fest &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr/>
+            <div class="sentence-with-button">
+              <h3 class="sentence">216 &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Reels-In &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>       
+          </div>
+          
+          <div class ="text">     
+            <div class="sentence-with-button">
+              <h3 class="sentence">217 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  Capture Quest  &nbsp;&nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>
+            <div class="sentence-with-button">
+              <h3 class="sentence">218 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  LeafArt Showcase&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>
+            <div class="sentence-with-button">
+              <h3 class="sentence">219&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; Cultural Quiz &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr/>
+            <div class="sentence-with-button">
+              <h3 class="sentence">220 &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Creator's Carnival &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16-05-2024</h3>
+              <a href="./User.html" >Register</a>
+            </div>
+            <hr>      
+          </div>
+        </div>
+
+      </div>
+    </div>
+  
+<script>
+    // Get a reference to the tiara element
+    var milanElement = document.getElementById("milan");
+  
+    // Add a click event listener to navigate when the element is clicked
+    milanElement.addEventListener("click", function() {
+      window.location.href = "./milan1.html";
+    });
+</script>
+
+</body>
+</html>

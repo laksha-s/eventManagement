@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000000; /* Light gray background */
+            padding: 100px;
+            
+        }
+        .login-container {
+            background-color: #ffffff; /* White background for the login box */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Adjust the width as needed */
+            margin: 0 auto; /* Center the login box */
+        }
+        input[type="text"], input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50; /* Blue button color */
+            color: #fff; /* White text color */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(96, 205, 132); /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="button" onclick="checkLogin()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function checkLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+    
+            if (username === 'admin' && password === 'admin') {
+                // Redirect to the admin page
+                window.location.href = 'front.html';
+            } else if (username !== 'admin' && password !== '') {
+                // Redirect to the student page
+                window.location.href = 'front1.html';
+            } else {
+                alert('Invalid login credentials. Please try again.');
+            }
+        }
+    </script>
+    
+</body>
+</html>

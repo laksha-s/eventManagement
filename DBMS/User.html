@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            width: 500px;
+            margin: 30px auto; /* Reduced margin */
+            padding: 5px 25px;
+            background-color: #000000;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgb(235, 233, 233);
+            color: aliceblue;
+        }
+
+        form {
+            text-align: center;
+            color: aliceblue;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+        table lable{
+            width: 20px;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+            background-color: #000000;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        th {
+            width: 40%;
+        }
+
+        
+        select,
+        
+        
+        input[type="tel"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+           
+            margin: 5px auto;
+            transition: border-color 0.3s ease;
+        }
+
+       
+        input[type="radio"]{
+            width: 15%;
+        }
+        input[type="submit"] {
+            background-color: #e8e8e8;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #c6c6c6;
+        }
+
+        input[type="PhoneNO"],
+        input[type="USN"] {
+            width: 90%; /* Adjust the width as needed */
+            padding: 12px;
+            border-radius: 5px;
+        }
+        input[type="text"] {
+            width: 90%;
+            border-radius: 5px;
+            padding: 12px;
+        }
+        input[type="email"] {
+            width: 90%;
+            border-radius: 5px;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="User.php" method="post">
+            <h2>Register Form</h2>
+            <table>
+                <tr>
+                    <th><label for="FName">Enter First Name</label></th>
+                    <td><input type="text" id="FName" name="FName"></td>
+                </tr>
+                <!-- Other rows... -->
+                <tr>
+                  <td>
+                      <label>Enter Last Name</label></td>
+                  <td><input type="text" name="LName"></td>
+              </tr>
+              <tr>
+                  <td>
+                      <label>Enter Event ID:</label></td>
+                  <td>
+                      <select name="EventID" id="EventID" onchange="populateCompetition()">
+                          <option value="1001"><Select:disabled></Select:disabled></option>
+                          <option value="1001">Milan</option>
+                          <option value="1002">Tiara</option>
+                          <option value="1003">Sports Day</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      <label>Enter Competition ID:</label></td>
+                  <td>
+                      <select name="CompID" id="CompID">
+                          <!-- Options will be populated dynamically using JavaScript -->
+                      </select>
+                  </td>
+              </tr>
+
+              <tr>
+                  <td>
+                  <label>Gender</label></td>
+                  <td><input type="radio" name="Gender" value="Male">Male
+                  <input type="radio" name="Gender" value="Female">Female</td>
+              </tr>
+              <tr>
+                  <td>
+                  <label>Enter Email</label></td>
+                  <td><input type="Email" name="Email"></td>
+              </tr>
+              
+              <tr>
+                  <td>
+                  <label>Enter Phone</label></td>
+                  <td><input type="PhoneNO" name="PhoneNO"></td>
+              </tr>
+              <tr>
+                  <td>
+                  <label>Enter USN</label></td>
+                  <td><input type="USN" name="USN"></td>
+              </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" name="save" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript code...
+         function populateCompetition() {
+            const eventSelect = document.getElementById('EventID');
+            const compSelect = document.getElementById('CompID');
+            compSelect.innerHTML = ''; // Clear existing options
+
+            if (eventSelect.value === '1002') {
+                // Populate competition options for EventID 1001
+                const competitions = ["11 - Battle of Bands" , "12 - Level Up" , "13 - Carnage" , " 14 - Zero Gravity" , " 15 - Groove" , "16 - Antara " , "17 - Excellencia"," 18 - Pitch Perfect" , "19 - Robo Sumo" , "20 - Hydro Cannon" , " 21 - Line Follower" , "22 - One Piece" , "23 - Shark Tank",  "24 - Bot Soccer"," 25 - Take-Off"," 26 - RC Extreme", "27 - Super Offroad" , " 28 - Web Ally"," 29 - Survival"," 30 - Ease of Flow", "31 - Lensation", "32 - Sketch It" , " 33 - Mock-Press" , " 34 - Reel-in" , " 35 - Brain War" , " 36 - Face Felica" , " 37 - Jam" , " 38  - Series Mania " , "39 - Just for laughs " , "40 - On the Hunt" , " 41 - Call of Duty " , "42 - Valorant"];
+                competitions.forEach(comp => {
+                    const option = document.createElement('option');
+                    option.value = comp; // You might want to set actual competition IDs here
+                    option.textContent = comp;
+                    compSelect.appendChild(option);
+                });
+            } else if (eventSelect.value === '1003') {
+                // Populate competition options for EventID 1002
+                const competitions = ["111 - BasketBall(M) " , "112 - Cricket(M) " , "113 - FootBall(M)" , " 114 - VolleyBall(M)" , " 115 - Tug Of War(M)" , "116 - ThrowBall(W) " , "117 - VolleyBall(W) "," 118 - Tug Of War(W) " , "119 - Badminton(M)" , "120 - Table Tennis(M)" , "121 - Badminton(W) " , "122 - Table Tennis(W)" , "123 - Chess(M) ",  "124 - Running Race-100m(M)"," 125 - Running Race-200m(M) "," 126 - Running Race-500m(M)", "127 - Chess(W) " , " 128 -  Running Race-100m(W) "," 129 - Running Race-200m(W)"," 130 - Running Race-500m(W) "];
+                competitions.forEach(comp => {
+                    const option = document.createElement('option');
+                    option.value = comp; // You might want to set actual competition IDs here
+                    option.textContent = comp;
+                    compSelect.appendChild(option);
+                });
+            }
+            else if (eventSelect.value === '1001') {
+                // Populate competition options for EventID 1002
+                const competitions = ["201 - Talent Hunt " , "202 - Rangoli Rendezvous " , "203 - Art and Craft" , " 204 - Eastern Singing" , " 205 - Western Singing" , "206 - Dad Jokes " , "207 - Expressive Elegance "," 208 - Ethnic wear and Costume competition " , "209 - Dance Clash" , "210 - Drama Delight" , "211 - Brush and Palette Clash " , "212 - Folk Fusion  Fiesta" , "213 - Lingo Fest ",  "214 - Creative Carnical"," 215 - Flavor Fest "," 216 - Reels-In", "217 - Capture Quest " , " 218 -  LeafArt Showcase "," 219 - Cultural Quiz"," 220 - Creators Carnival "];
+                competitions.forEach(comp => {
+                    const option = document.createElement('option');
+                    option.value = comp; // You might want to set actual competition IDs here
+                    option.textContent = comp;
+                    compSelect.appendChild(option);
+                });
+            }
+            // Add more cases for other EventIDs if needed
+        }
+    </script>
+</body>
+</html>
